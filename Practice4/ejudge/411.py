@@ -1,8 +1,4 @@
-for i in gen(a, n):
-    print(i, end=" ")
-
-
-    import json
+import json
 def f(a, b):
     for k, v in b.items():
         if v is None:
@@ -15,4 +11,5 @@ def f(a, b):
 
 a=json.loads(input())
 b= json.loads(input())
+
 print(json.dumps(f(a, b), separators=(',', ':'), sort_keys=True))
