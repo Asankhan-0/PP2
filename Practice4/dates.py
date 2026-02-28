@@ -19,13 +19,13 @@ print(datetime.now().replace(microsecond=0))
 # Write a Python program to calculate two date difference in seconds.
 
 import datetime
-
 d1= input()
 d2= input()
 
-d1 = datetime.strptime(d1_str, "%Y-%m-%d %H:%M:%S")
-d2 = datetime.strptime(d2_str, "%Y-%m-%d %H:%M:%S")
-diff = (d2 - d1).total_seconds()
+d1str = datetime.strptime(d1_str, "%Y-%m-%d %H:%M:%S")
+d2str = datetime.strptime(d2_str, "%Y-%m-%d %H:%M:%S")
+diff=(d2 - d1).total_seconds()
 print(diff)
+
 
 
