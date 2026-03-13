@@ -31,9 +31,11 @@ for ev in even:
 words = ["calculus2", "programming", "history", "structures"]
 long = filter(lambda a: len(a)>6, words)
 for l in long:
-    print(long)
+    print(l)
 
 # reduce(function, iterable) 
+from functools import reduce
+
 nums = [2, 4, 6, 8]
 res = reduce(lambda x, y: x + y, nums)
 print(res)
@@ -41,4 +43,5 @@ print(res)
 nums = [5, 9, 3, 12, 7]
 res = reduce(lambda x, y: x if x > y else y, nums)
 print(res)
+
 
