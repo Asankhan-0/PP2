@@ -16,7 +16,7 @@ conn.commit()
 
 
 
-with open("contacts.csv", "r", encoding='utf-8') as f:
+with open("contacts.csv", "r") as f:
     contacts = csv.reader(f)
     cursor.executemany(
             """
@@ -105,14 +105,14 @@ def delete_contact(need_contact):
 
 def menu():
     while True:
-        print("\n------ cool phonebook ------")
-        print("1. Add a contact")
-        print("2. Find a contact")
-        print("3. Update a contact by a name")
-        print("4. Update a contact by a phone number")
-        print("5. Delete a contact")
-        print("6. View the table")
-        print("7. Quit")
+        print("cool phonebook")
+        print("1.Add a contact")
+        print("2.Find a contact")
+        print("3.Update a contact by a name")
+        print("4.Update a contact by a phone number")
+        print("5.Delete a contact")
+        print("6.View the table")
+        print("7.Quit")
 
         choose = input("What would you like to do? : ")
 
