@@ -1,4 +1,4 @@
--- Создание таблицы групп
+
 CREATE TABLE IF NOT EXISTS groups (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) UNIQUE NOT NULL
@@ -10,7 +10,7 @@ ALTER TABLE better_phonebook ADD COLUMN IF NOT EXISTS birthday DATE;
 ALTER TABLE better_phonebook ADD COLUMN IF NOT EXISTS group_id INTEGER REFERENCES groups(id);
 ALTER TABLE better_phonebook ADD CONSTRAINT unique_name UNIQUE(name);
 
--- Создание таблицы для множественных номеров телефонов
+
 CREATE TABLE IF NOT EXISTS phones (
     id SERIAL PRIMARY KEY,
     contact_id INTEGER REFERENCES better_phonebook(id) ON DELETE CASCADE,
